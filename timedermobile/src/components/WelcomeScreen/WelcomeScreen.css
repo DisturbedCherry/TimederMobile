@@ -1,0 +1,67 @@
+/* WelcomeScreen.css */
+
+/* Ensure .welcome-screen is flex container */
+.welcome-screen {
+  background: rgb(242, 226, 244);
+  background: radial-gradient(circle, rgba(242, 226, 244, 1) 0%, rgba(186, 130, 194, 1) 100%);
+  display: flex;
+  flex-direction: column; /* Align items in a column */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  height: 100vh; /* Adjust height as needed */
+  width: 100vh;
+}
+
+.signInButton {
+  box-shadow: 0px 4px 0px 0px #312c33;
+  background-color: #f2e2f4;
+  border-radius: 27px;
+  border: 4px solid #312c33;
+  display: inline-block;
+  cursor: pointer;
+  color: #312c33;
+  font-family: Georgia;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 6px 60px;
+  text-decoration: none;
+  text-shadow: 0px 0px 0px #312c33;
+  margin-top: 20px; /* Add margin top for spacing */
+}
+.signInButton:hover {
+  background-color: #f2e2f4;
+}
+.signInButton:active {
+  position: relative;
+  top: 1px;
+}
+
+img {
+  padding: 5px;
+  width: 250px;
+}
+
+@font-face {
+  font-family: 'Genty Sants';
+  src: url('../../../public/fonts/genty-sans-regular.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Genty Sants', sans-serif;
+}
+
+h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 40px;
+}
+
+.limited-time {
+  color: #f2e2f4; /* Example style: change the text color to red */
+  text-shadow: 
+  -1px -1px 0 #000,  
+   1px -1px 0 #000,
+  -1px  1px 0 #000,
+   1px  1px 0 #000; /* Creates a black border around the text */
+   font-size: 28px;
+}
