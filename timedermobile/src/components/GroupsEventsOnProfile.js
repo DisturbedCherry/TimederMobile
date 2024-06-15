@@ -10,11 +10,11 @@ export default function GEOP( {icon} ) {
   };
   return (
     <div className="menu-panel">
-      <SmallButton text='Wejkusie' onClick={handleButtonClick}/>
+      <SmallButton text='Turniej AZS' onClick={handleButtonClick}/>
       <SmallButton text='Juwenalia' onClick={handleButtonClick}/>
       <SmallButton text='Maraton' onClick={handleButtonClick}/>
-      <SmallButton text='Dantejczycy' onClick={handleButtonClick}/>
-      <SmallButton text='Białe kapelusze' onClick={handleButtonClick}/>
+      <SmallButton text='Piątkowe wyjście' onClick={handleButtonClick}/>
+      <SmallButton text='APR' onClick={handleButtonClick}/>
     </div>
   );
 }
