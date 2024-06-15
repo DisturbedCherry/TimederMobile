@@ -28,13 +28,6 @@
   text-shadow: 0px 0px 0px #312c33;
   margin-top: 20px; /* Add margin top for spacing */
 }
-.signInButton:hover {
-  background-color: #f2e2f4;
-}
-.signInButton:active {
-  position: relative;
-  top: 1px;
-}
 
 img {
   padding: 5px;
@@ -65,3 +58,4 @@ h1 {
    1px  1px 0 #000; /* Creates a black border around the text */
    font-size: 28px;
 }
+
