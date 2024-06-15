@@ -1,18 +1,18 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import CalendarScreen from './components/CalendarScreen/CalendarScreen';
-import CreateEvenScreen from './components/CreateEvenScreen/CreateEvenScreen';
-import CreateGroupScreen from './components/CreateGroupScreen/CreateGroupScreen';
-import EventScreen from './components/EventScreen/EventScreen';
-import GroupScreen from './components/GroupScreen/GroupScreen';
-import LoginScreen from './components/LoginScreen/LoginScreen';
-import MonthEventScreen from './components/MonthEventScreen/MonthEventScreen';
-import NoPage from './components/NoPage/NoPage';
-import NotificationScreen from './components/NotificationScreen/NotificationScreen';
-import ProfileScreen from './components/ProfileScreen/ProfileScreen';
-import ReportIssueScreen from './components/ReportIssueScreen/ReportIssueScreen';
-import SettingsScreen from './components/SettingsScreen/SettingsScreen';
-import WelcomeScreen from './components/WelcomeScreen/WelcomeScreen';
+import CalendarScreen from './pages/CalendarScreen/CalendarScreen';
+import CreateEvenScreen from './pages/CreateEvenScreen/CreateEvenScreen';
+import CreateGroupScreen from './pages/CreateGroupScreen/CreateGroupScreen';
+import EventScreen from './pages/EventScreen/EventScreen';
+import GroupScreen from './pages/GroupScreen/GroupScreen';
+import LoginScreen from './pages/LoginScreen/LoginScreen';
+import MonthEventScreen from './pages/MonthEventScreen/MonthEventScreen';
+import NoPage from './pages/NoPage/NoPage';
+import NotificationScreen from './pages/NotificationScreen/NotificationScreen';
+import ProfileScreen from './pages/ProfileScreen/ProfileScreen';
+import ReportIssueScreen from './pages/ReportIssueScreen/ReportIssueScreen';
+import SettingsScreen from './pages/SettingsScreen/SettingsScreen';
+import WelcomeScreen from './pages/WelcomeScreen/WelcomeScreen';
 
 function App() {
   return (

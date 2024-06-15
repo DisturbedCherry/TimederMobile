@@ -1,6 +1,6 @@
 // Button.js
 import React from 'react';
-import './LoginScreen.css'; // You can create and style this CSS file if needed
+import './Components.css'; // You can create and style this CSS file if needed
 
 export default function ForgotPasswordButton({ text, onClick }) {
   return (
