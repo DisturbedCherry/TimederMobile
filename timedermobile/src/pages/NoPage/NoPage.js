@@ -1,7 +1,9 @@
+import React from 'react';
+import './NoPage.css';
 export default function NoPage() {
   return (
-    <>
-      <h1>No Page</h1>
-    </>
+    <div className='no-page'>
+      <h1>No Page Found</h1>
+    </div>
   )
 }
