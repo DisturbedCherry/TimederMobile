@@ -47,14 +47,3 @@ h2 {
 	font-weight: normal;
 }
 
-input { /* TODO */
-	border: none;
-	height: 28px;
-	width: 300px;
-	border-radius: 7px;
-}
-
-.username { /* TODO */
-	padding-top: 50px;
-}
-

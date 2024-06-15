@@ -1,7 +1,7 @@
 // WelcomeScreen.js
 import React from 'react';
 import './WelcomeScreen.css';
-import Button from '../../components/WelcomeScreenButton';
+import Button from '../../components/BigButton';
 import Logo from '../../components/Logo'; 
 import LimitedTimeOnly from '../../components/LimitedTimeOnly';
 
