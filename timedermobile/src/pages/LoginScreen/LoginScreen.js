@@ -1,5 +1,6 @@
-import BackButton from './BackButton';
-import ForgotPasswordButton from './ForgotPasswordButton';
+import BackButton from '../../components/BackButton';
+import ForgotPasswordButton from '../../components/ForgotPasswordButton';
+import LimitedTimeOnly from '../../components/LimitedTimeOnly';
 import './LoginScreen.css';
 
 export default function LoginScreen() {
@@ -10,13 +11,7 @@ export default function LoginScreen() {
   return (
     <div className="login-screen">
       <BackButton className="back-button" text="<" onClick={handleButtonClick}/>
-      <div className="text-logo">
-        <h1 className="limited-time">Limited Time Only</h1>
-        <h1 className="limited-time">Limited Time Only</h1>
-        <h1>TIMEder</h1>
-        <h1 className="limited-time">Limited Time Only</h1>
-        <h1 className="limited-time">Limited Time Only</h1>
-      </div>
+      <LimitedTimeOnly/>
         <div className="username">
           <h2>USERNAME/EMAIL:</h2>
           <input type="text" id="username" name='username' placeholder='123456@edu.p.lodz.pl'/>
@@ -24,8 +19,8 @@ export default function LoginScreen() {
         <div className="password">
           <h2>PASSWORD:</h2>
           <input type="text" id="password" name='password' placeholder='************'/>
-          <ForgotPasswordButton className="forgot-password-button" text="FORGOT PASSWORD" onClick={handleButtonClick} />
       </div>
+      <ForgotPasswordButton className="forgot-password-button" text="FORGOT PASSWORD" onClick={handleButtonClick} />
     </div>
   )
 }
