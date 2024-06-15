@@ -61,7 +61,6 @@
   display: inline-block;
   cursor: pointer;
   color: #312c33;
-  font-family: Georgia;
   font-size: 24px;
   font-weight: bold;
   padding-left: 10%;
@@ -84,4 +83,84 @@ input {
 	height: 28px;
 	width: 300px;
 	border-radius: 7px;
+}
+
+
+/* Sidebar.css */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hide the sidebar initially */
+  width: 200px;
+  height: 95%;
+  background-color: #6d3c86;
+  color: white;
+  transition: left 0.3s ease, opacity 0.3s ease;
+  opacity: 0; /* Make it transparent initially */
+  z-index: 1000; /* Make sure the sidebar is above other elements */
+  border-radius: 5px;
+  height: 97%;
+  margin-top: 3%;
+  margin-left: 2.5%;
+}
+
+.sidebar.open {
+  left: 0; /* Move the sidebar into view */
+  opacity: 1; /* Make it visible */
+ 
+}
+
+.sidebar-content {
+  padding: 20px;
+}
+
+.sidebar-toggle-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001; /* Make sure the button is above other elements */
+  background-color: #6d3c86;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 96%;
+  height: 97.5%;
+  margin-left: 2%;
+  margin-top: 2%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 999; /* Make sure the overlay is below the sidebar but above other elements */
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidebar-image {
+  max-width: 100px;
+  max-height: 150px;
+  width: 100%;
+  height: 100%;
+  margin-left: 16%;
+  margin-right: 16%;
+  margin-top: 70%;
+  margin-bottom: 0;
+}
+
+.timeder-text {
+  margin-top: 0;
+  font-size: 30px;
+  text-align: center;
 }

@@ -6,6 +6,7 @@ import CreateGroupScreen from './pages/CreateGroupScreen/CreateGroupScreen';
 import EventScreen from './pages/EventScreen/EventScreen';
 import GroupScreen from './pages/GroupScreen/GroupScreen';
 import LoginScreen from './pages/LoginScreen/LoginScreen';
+import MainMenu from './pages/MainMenu/MainMenu';
 import MonthEventScreen from './pages/MonthEventScreen/MonthEventScreen';
 import NoPage from './pages/NoPage/NoPage';
 import NotificationScreen from './pages/NotificationScreen/NotificationScreen';
@@ -27,6 +28,7 @@ function App() {
             <Route path = "/EventScreen" element = {<EventScreen/>}/>
             <Route path = "/GroupScreen" element = {<GroupScreen/>}/>
             <Route path = "/LoginScreen" element = {<LoginScreen/>}/>
+            <Route path = "/MainMenu" element = {<MainMenu/>}/>
             <Route path = "/MonthEventScreen" element = {<MonthEventScreen/>}/>
             <Route path = "*" element = {<NoPage/>}/>
             <Route path = "/NotificationScreen" element = {<NotificationScreen/>}/>
