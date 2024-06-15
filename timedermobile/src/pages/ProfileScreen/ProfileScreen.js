@@ -1,9 +1,13 @@
 // WelcomeScreen.js
 import React from 'react';
-import './WelcomeScreen.css';
-import Button from '../../components/BigButton';
-import Logo from '../../components/Logo'; 
-import LimitedTimeOnly from '../../components/LimitedTimeOnly';
+import './ProfileScreen.css';
+import Sidebar from '../../components/Sidebar';
+import BackButton from '../../components/CornerButton';
+import PinButton from '../../components/PinButton';
+import { IoIosArrowBack } from "react-icons/io";
+import { TiPin } from "react-icons/ti";
+import ProfileContent from '../../components/Profile';
+import ProfilePicture from '../../images/profile.jpg'
 
 export default function ProfileScreen() {
   const handleButtonClick = () => {
@@ -12,10 +16,11 @@ export default function ProfileScreen() {
   };
 
   return (
-    <div className="welcome-screen">
-      <LimitedTimeOnly/>
-      <Logo/>
-      <Button text="SING IN" onClick={handleButtonClick} />
+    <div className="profile-screen">
+      <BackButton className="back-button" icon={<IoIosArrowBack />} onClick={handleButtonClick}/>
+      <PinButton className="pin-button" icon={<TiPin  />} onClick={handleButtonClick}/>
+      <Sidebar/>
+      <ProfileContent name='Jacob' profile={ProfilePicture}/>
     </div>
   );
 }
