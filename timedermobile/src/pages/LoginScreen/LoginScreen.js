@@ -19,7 +19,7 @@ export default function LoginScreen() {
       <Input label='USERNAME/EMAIL' placeholder='123456@edu.p.lodz.pl'/>
       <Input label='PASSWORD' placeholder='**********'/>
       <ForgotPasswordButton className="forgot-password-button" text="FORGOT PASSWORD" onClick={handleButtonClick} />
-      <Button text="LOG IN"/>
+      <Button text="LOG IN" onClick={handleButtonClick}/>
     </div>
   )
 }
