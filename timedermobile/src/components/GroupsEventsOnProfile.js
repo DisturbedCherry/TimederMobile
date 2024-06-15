@@ -3,7 +3,7 @@ import React from 'react';
 import './Components.css'; // You can create and style this CSS file if needed
 import SmallButton from './SmallButton';
 
-export default function GEOP( {icon} ) {
+export default function GEOP() {
   const handleButtonClick = () => {
     // Define your button click logic here
     alert('Button clicked!');
