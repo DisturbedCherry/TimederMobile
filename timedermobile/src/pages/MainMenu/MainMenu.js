@@ -6,6 +6,12 @@ import LimitedTimeOnly from '../../components/LimitedTimeOnly';
 import BackButton from '../../components/CornerButton';
 import { BiBell } from "react-icons/bi";
 import Panel from '../../components/MainMenuPanel'
+import { BiSolidCalendar } from "react-icons/bi";
+import { GrGroup } from "react-icons/gr";
+import { BiBug } from "react-icons/bi";
+import { PiBeerBottle } from "react-icons/pi";
+import { FiSettings } from "react-icons/fi";
+import { FaRegDotCircle } from "react-icons/fa";
 
 export default function MainMenu() {
   const handleButtonClick = () => {
@@ -20,19 +26,19 @@ export default function MainMenu() {
       <LimitedTimeOnly/>
       <div className='panel-section'>
         <div className='panel-row'>
-          <Panel/>
-          <Panel/>
-          <Panel/>
+          <Panel icon={<BiSolidCalendar />}/>
+          <Panel icon={<GrGroup />}/>
+          <Panel icon={<BiBug />}/>
         </div>
         <div className='panel-row'>
-          <Panel/>
-          <Panel/>
-          <Panel/>
+          <Panel icon={<PiBeerBottle />}/>
+          <Panel icon={<BiBell />}/>
+          <Panel icon={<FiSettings />}/>
         </div>
         <div className='panel-row'>
-          <Panel/>
-          <Panel/>
-          <Panel/>
+          <Panel icon={<FaRegDotCircle  />}/>
+          <Panel icon={<FaRegDotCircle  />}/>
+          <Panel icon={<FaRegDotCircle  />}/>
         </div>
       </div>
     </div>
