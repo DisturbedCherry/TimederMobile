@@ -27,7 +27,6 @@ export default function Sidebar() {
       )}
       <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
         <div className="sidebar-content">
-          {/* Your sidebar content goes here */}
           <img src={logo} alt="Logo" className="sidebar-image"/>
           <p className='timeder-text'>TIMEDER</p>
           <Button text='MY PROFILE' bgcolor='rgb(242, 226, 244)' icon={<BiSolidUser />} textcolor='#312c33'/>
