@@ -29,6 +29,7 @@ export default function LoginScreen() {
           const response = await AuthService.login(index, password);
           if (response.status === 200) {
               showSuccessMessage('Login successful').then(r => r.dismiss);
+              localStorage.setItem('token', response.data.token);
               navigate('/MainMenu');
           } else {
               showErrorMessage('Login failed').then(r => r.dismiss);
