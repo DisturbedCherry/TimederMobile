@@ -45,6 +45,8 @@
 .logo-div {
   position: absolute;
   top: 43%;
+  margin-top: 5%;
+  text-align: center;
 }
 
 .big-button-div {

@@ -20,7 +20,7 @@ export default function NotificationScreen() {
       <PinButton className="pin-button" icon={<TiPin  />} onClick={handleButtonClick}/>
       <Sidebar/>
       <div className='button-container-notification'>
-        <h1>Notifications</h1>
+        <h1>Create event</h1>
         <InputVital placeholdertext='SET NAME'/>
         <InputVital placeholdertext='SET LOCATION'/>
         <InputVital placeholdertext='SET DATE'/>
