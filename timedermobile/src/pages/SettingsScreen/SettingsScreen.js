@@ -36,8 +36,8 @@ export default function SettingsScreen() {
         </div>
       </div>
       <div className='button-container'>
-        <SmallButton text='Zmień profilowe' onClick={handleButtonClick}/>
-        <SmallButton text='Usuń konto' onClick={handleButtonClick}/>
+        <SmallButton text='Change profile picture' onClick={handleButtonClick}/>
+        <SmallButton text='Delete account' onClick={handleButtonClick}/>
       </div>
     </div>
   );

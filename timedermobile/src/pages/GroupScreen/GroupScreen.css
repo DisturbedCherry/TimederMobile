@@ -1,0 +1,22 @@
+.notification-screen {
+  background: rgb(242, 226, 244);
+  background: radial-gradient(circle, rgba(242, 226, 244, 1) 0%, rgba(186, 130, 194, 1) 100%);
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+  position: relative;
+  height: 100%; 
+  width: 100vh;
+}
+
+.button-container-notification {
+  position: absolute;
+  top: 20%;
+  width: 97%;
+}
+
+@font-face {
+  font-family: 'Genty Sants';
+  src: url('../../../public/fonts/genty-sans-regular.ttf') format('truetype');
+}
