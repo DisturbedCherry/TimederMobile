@@ -5,7 +5,9 @@ import BackButton from '../../components/CornerButton';
 import PinButton from '../../components/PinButton';
 import { IoIosArrowBack } from "react-icons/io";
 import { TiPin } from "react-icons/ti";
-import Input from '../../components/CustomInput'
+import InputVital from '../../components/CustomInput'
+import InputNormal from '../../components/NormalInput'
+import Button from '../../components/BigButton';
 
 export default function NotificationScreen() {
   const handleButtonClick = () => {
@@ -19,10 +21,15 @@ export default function NotificationScreen() {
       <Sidebar/>
       <div className='button-container-notification'>
         <h1>Notifications</h1>
-        <Input placeholdertext='test'/>
-        <Input />
-        <Input />
-        <Input />
+        <InputVital placeholdertext='SET NAME'/>
+        <InputVital placeholdertext='SET LOCATION'/>
+        <InputVital placeholdertext='SET DATE'/>
+        <InputVital placeholdertext='SET START TIME'/>
+        <InputNormal placeholdertext='SET DESCRIPTION'/>
+        <InputNormal placeholdertext='SET PHOTO'/>
+        <InputNormal placeholdertext='ADD USERS'/>
+        <InputNormal placeholdertext='ADD GROUPS'/>
+        <Button text="CREATE GROUP" onClick={handleButtonClick}/>
       </div>
     </div>
   );

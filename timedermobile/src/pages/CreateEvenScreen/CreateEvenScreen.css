@@ -9,3 +9,12 @@
   height: 100%; 
   width: 100vh;
 }
+
+.big-button-div {
+  position: fixed !important;
+  top: 89% !important;
+}
+
+.button-container-notification {
+  text-align: center;
+}

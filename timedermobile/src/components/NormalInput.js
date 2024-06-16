@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Components.css';
 
-const InputBox = ({placeholdertext}) => {
+const InputBox = ({ placeholdertext }) => {
   const [inputValue, setInputValue] = useState('');
 
   const handleChange = (event) => {
@@ -13,7 +13,7 @@ const InputBox = ({placeholdertext}) => {
       type="text"
       value={inputValue}
       onChange={handleChange}
-      className={`input-box-vital ${inputValue.length >= 3 ? 'valid' : ''}`}
+      className="input-box-normal"
       placeholder={placeholdertext}
     />
   );
