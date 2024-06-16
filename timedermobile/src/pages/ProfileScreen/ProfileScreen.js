@@ -9,7 +9,6 @@ import { TiPin } from "react-icons/ti";
 import ProfileContent from '../../components/Profile';
 import ProfilePicture from '../../images/profile.jpg'
 import { useNavigate } from 'react-router-dom';
-import {getNotifications} from "../../services/notificationService";
 import {showErrorMessage} from "../../services/swalService";
 import {getUser} from "../../services/userService";
 
