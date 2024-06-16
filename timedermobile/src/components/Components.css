@@ -233,8 +233,8 @@ input {
   color: #312c33;
   font-size: 16px;
   font-weight: bold;
-  padding-left: 10%;
-  padding-right: 10%;
+  /* padding-left: 10%;
+  padding-right: 10%; */
   padding-top: 3%;
   padding-bottom: 3%;
   width: 100%;
@@ -259,3 +259,26 @@ input {
   border-radius: 10px;
   padding: 2px;
 }
+
+.input-box {
+  background-color:#e34d4d;
+	border: solid #312c33;
+  border-width: 3px;
+  border-radius: 20px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:24px;
+	text-decoration:none;
+  margin-bottom: 5%;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #312c33;
+}
+
+.input-box.valid {
+  background-color:#31f06a;
+}
+
