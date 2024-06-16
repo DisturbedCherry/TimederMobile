@@ -29,7 +29,7 @@ export default function NotificationScreen() {
         <InputNormal placeholdertext='SET PHOTO'/>
         <InputNormal placeholdertext='ADD USERS'/>
         <InputNormal placeholdertext='ADD GROUPS'/>
-        <Button text="CREATE GROUP" onClick={handleButtonClick}/>
+        <Button text="CREATE EVENT" onClick={handleButtonClick}/>
       </div>
     </div>
   );
