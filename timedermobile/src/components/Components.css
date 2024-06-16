@@ -212,14 +212,15 @@ input {
 }
 
 .menu-panel {
-  width: 100%;
+  width: 98%;
   margin: 0;
-  margin-top: 5%;
-}
+  text-align: center;
+  }
 
 .small-button-div {
-
   max-width: 100%;
+  margin-top: 3%;
+
 }
 
 .small-button {
@@ -239,4 +240,22 @@ input {
   width: 100%;
   max-width: 100%;
   text-decoration: none;
+}
+
+.report-issue-input-div {
+  height: 40%;
+  width: 90%;
+  margin-bottom: 5%;
+}
+
+.report-issue-input {
+  width: 97%;
+  height: 97%;
+  word-wrap: break-word;
+  font-size: 17px;
+  resize: none;
+  border: solid #312c33;
+  border-width: 3px;
+  border-radius: 10px;
+  padding: 2px;
 }
