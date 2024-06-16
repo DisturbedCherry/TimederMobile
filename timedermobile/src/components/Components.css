@@ -506,3 +506,15 @@ input {
 .geop-div {
   width: 90%;
 }
+
+.swal2-popup {
+  width: 250px !important;
+}
+
+.swal2-popup .swal2-styled.swal2-confirm {
+  background-color: #6D2B75FF !important;
+}
+
+.swal2-popup .swal2-styled.swal2-cancel {
+  background-color: #A060A8FF !important;
+}

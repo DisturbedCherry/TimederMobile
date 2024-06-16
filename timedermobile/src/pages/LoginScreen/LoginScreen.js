@@ -6,9 +6,15 @@ import './LoginScreen.css';
 import Button from '../../components/BigButton';
 import { IoIosArrowBack } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
+import {useState} from "react";
+import AuthService from "../../services/authService";
+import {showErrorMessage, showSuccessMessage} from "../../services/swalService";
 
 export default function LoginScreen() {
   const navigate = useNavigate();
+  const [index, setIndex] = useState('');
+  const [password, setPassword] = useState('');
+
 
   const handleBackButtonClick = () => {
     navigate(-1);
@@ -18,16 +24,26 @@ export default function LoginScreen() {
     alert('NOT WORKING YET');
   }
 
-  const handleLoginButtonClick = () => {
-    navigate('/MainMenu');
+  const handleLoginButtonClick = async () => {
+      try {
+          const response = await AuthService.login(index, password);
+          if (response.status === 200) {
+              showSuccessMessage('Login successful').then(r => r.dismiss);
+              navigate('/MainMenu');
+          } else {
+              showErrorMessage('Login failed').then(r => r.dismiss);
+          }
+      } catch (error) {
+          showErrorMessage('An error occurred').then(r => r.dismiss);
+      }
   };
 
   return (
     <div className="login-screen">
       <BackButton className="back-button" icon={<IoIosArrowBack />} onClick={handleBackButtonClick}/>
       <LimitedTimeOnly/>
-      <Input label='INDEX' placeholder='123456'/>
-      <Input label='PASSWORD' placeholder='**********'/>
+      <Input label='INDEX' placeholder='123456' value={index} onChange={e => setIndex(e.target.value)}/>
+      <Input label='PASSWORD' placeholder='**********' value={password} onChange={e => setPassword(e.target.value)} type="password"/>
       <ForgotPasswordButton className="forgot-password-button" text="FORGOT PASSWORD" onClick={handleButtonClick} />
       <Button text="LOG IN" onClick={handleLoginButtonClick}/>
     </div>
