@@ -1,52 +1,47 @@
-.back-button {
-	background-color:#6d3c86;
-	border-radius:100%;
-	border: none;
-	cursor:pointer;
-	color:#f2e2f4;
-	font-family:Arial;
-	font-size:18px;
-	font-weight:bold;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 12px;
-  padding-bottom: 10px;
-	text-decoration:none;
-}
-
-.back-button-div {
+/* LIMITED TIME ONLY COMPONENT */
+.limited-time-only-div {
   position: absolute;
-  top: 2%;
-  right: 2%;
+  top: 10%;
+  text-align: center;
+  max-width: 90%;
+  max-height: 40%;
 }
 
-.forgot-password-button {
-  background-color: #f2e2f4;
-  border-radius: 16px;
-  border: 4px solid #312c33;
-  cursor: pointer;
-  color: #312c33;
-  font-size: 12px;
-  font-weight: bold;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  text-decoration: none;
-  width: 200px;
-  position: absolute;
-  top: 68%;
-  right: 3%;
+.limited-time-only-text {
+  color: #f2e2f4;
+  text-shadow: 
+  -1px -1px 0 #000,  
+   1px -1px 0 #000,
+  -1px  1px 0 #000,
+   1px  1px 0 #000;
+   font-size: 28px;
+   margin: 0;
 }
 
-.limited-time-only {
-  position: absolute;
-  top: 100px;
+.limited-time-only-text-timeder {
+  font-size: 50px;
+  margin: 0;
 }
+/* END */
 
+
+/* logo-div */
 .logo-div {
   position: absolute;
-  top: 43%;
+  top: 40%;
+  display: flex;
+  justify-content: center; 
+  margin-bottom: 20px; 
 }
 
+.logo-image {
+  width: 270px; 
+  height: auto;
+}
+/* END */
+
+
+/* BIG BUTTON COMPONENT */
 .big-button-div {
   position: absolute;
   top: 80%;
@@ -74,6 +69,67 @@
   text-decoration: none;
   text-shadow: 0px 0px 0px #312c33;
 }
+/* END */
+
+/* BACK BUTTON */
+.back-button-div {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+}
+
+.back-button {
+	background-color:#6d3c86;
+	border-radius:100%;
+	border: none;
+	cursor:pointer;
+	color:#f2e2f4;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:bold;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 12px;
+  padding-bottom: 10px;
+	text-decoration:none;
+}
+/* END */
+
+/* INPUT LOGIN SCREEN */
+.input-login-screen-label {
+  font-size: 16px;
+	font-weight: normal;
+}
+/* END */
+
+/* FORGOT PASSWORD */
+.forgot-password-button-div {
+  position: absolute;
+  top: 63%;
+  right: 3%;
+}
+
+.forgot-password-button {
+  background-color: #f2e2f4;
+  border-radius: 16px;
+  border: 4px solid #312c33;
+  cursor: pointer;
+  color: #312c33;
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-decoration: none;
+  width: 200px;
+  
+}
+/* END */
+
+
+
+
+
+
 
 .input {
   padding: 1px;
@@ -165,6 +221,7 @@ input {
 
 .timeder-text {
   margin-top: 0;
+  margin-bottom: 5%;
   font-size: 30px;
   text-align: center;
 }
@@ -186,12 +243,23 @@ input {
 	text-decoration:none;
 }
 
+.menu-panel-geop {
+  float: left;
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 2.2%;
+  margin-right: 2.2%
+  
+}
+
 .menu-panel {
   float: left;
-  margin-left: 2.6%;
-  margin-top: 4%;
-  margin-bottom: 4%;
-  margin-top: 10px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 2.2%;
+  margin-right: 2.2%
+  
 }
 
 .pin-button-div {
@@ -211,14 +279,8 @@ input {
   font-size: 26px;
 }
 
-.menu-panel {
-  width: 98%;
-  margin: 0;
-  text-align: center;
-  }
-
 .small-button-div {
-  max-width: 100%;
+  width: 100%;
   margin-top: 3%;
 
 }
@@ -268,12 +330,13 @@ input {
 	color:#ffffff;
 	font-size:24px;
 	text-decoration:none;
-  margin-bottom: 3%;
+  margin-bottom: 2%;
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
   font-weight: bold;
   color: #312c33;
+  width: 98%;
 }
 
 .input-box-vital.valid {
@@ -296,6 +359,7 @@ input {
   padding-bottom: 5px;
   font-weight: bold;
   color: #312c33;
+  width: 98%;
 }
 
 .toggle-button {
@@ -364,14 +428,13 @@ input {
 
 .toggle-button-interested {
   background-color: #31f06a;
-	border: solid #312c33;
+  border: solid #312c33;
   border-width: 3px;
   border-radius: 20px;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-size:18px;
-	text-decoration:none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: none;
   margin-bottom: 3%;
   text-align: center;
   padding-top: 5px;
@@ -382,12 +445,13 @@ input {
 }
 
 .toggle-button-interested.interested {
+  background-color: #31f06a;
+}
+
+.toggle-button-interested.not-interested {
   background-color: #e34d4d;
 }
 
-.toggle-button-interested.notinterested {
-  background-color: #31f06a;
-}
 
 .toggle-button-going {
   background-color: #31f06a;
@@ -413,7 +477,7 @@ input {
   background-color: #31f06a;
 }
 
-.toggle-button-going.notgoing {
+.toggle-button-going.not-going {
   background-color: #e34d4d;
 }
 
@@ -437,4 +501,8 @@ input {
   max-width: 100%;
   text-decoration: none;
   margin-bottom: 5%;
+}
+
+.geop-div {
+  width: 90%;
 }

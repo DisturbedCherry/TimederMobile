@@ -8,23 +8,34 @@ import { IoIosArrowBack } from "react-icons/io";
 import { TiPin } from "react-icons/ti";
 import SmallButton from '../../components/SmallButton'
 import Calendar from '../../images/calendar.png'
+import { useNavigate } from 'react-router-dom';
 
 export default function CalendarScreen() {
+  const navigate = useNavigate();
+
+  const handleBackButtonClick = () => {
+    navigate(-1);
+  };
+
+  const handleThisMonthButtonClick = () => {
+    navigate('/MonthEventScreen');
+  };
+
   const handleButtonClick = () => {
     alert('Button clicked!');
   };
 
   return (
     <div className="event-calendar-screen">
-      <BackButton className="back-button" icon={<IoIosArrowBack />} onClick={handleButtonClick}/>
+      <BackButton className="back-button" icon={<IoIosArrowBack />} onClick={handleBackButtonClick}/>
       <PinButton className="pin-button" icon={<TiPin  />} onClick={handleButtonClick}/>
       <Sidebar/>
       <div className='content-part'>
         <h1>Events Calendar</h1>
-        <img src={Calendar} alt="calendar" />
+        <img src={Calendar} alt="calendar" className='calendar-picture-temp'/>
       </div>
-      <div className='button-container'>
-        <SmallButton text='VIEW THIS MONTH EVENTS' onClick={handleButtonClick}/>
+      <div className='button-container-for-calendar'>
+        <SmallButton text='VIEW THIS MONTH EVENTS' onClick={handleThisMonthButtonClick}/>
         <SmallButton text='CREATE NEW EVENT' onClick={handleButtonClick}/>
       </div>
     </div>

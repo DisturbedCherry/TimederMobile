@@ -8,6 +8,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { TiPin } from "react-icons/ti";
 import ProfileEvent from '../../components/EventContent';
 import EvenPictureThis from '../../images/juwe.png'
+import { useNavigate } from 'react-router-dom';
 
 export default function EventScreen() {
   const handleButtonClick = () => {
@@ -15,9 +16,15 @@ export default function EventScreen() {
     alert('Button clicked!');
   };
 
+  const navigate = useNavigate();
+
+  const handleBackButtonClick = () => {
+    navigate(-1);
+  };
+
   return (
     <div className="event-screen">
-      <BackButton className="back-button" icon={<IoIosArrowBack />} onClick={handleButtonClick}/>
+      <BackButton className="back-button" icon={<IoIosArrowBack />} onClick={handleBackButtonClick}/>
       <PinButton className="pin-button" icon={<TiPin  />} onClick={handleButtonClick}/>
       <Sidebar/>
       <ProfileEvent eventName='Juwenalia' evenPicture={EvenPictureThis}/>
