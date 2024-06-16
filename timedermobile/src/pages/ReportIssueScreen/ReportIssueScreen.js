@@ -8,8 +8,15 @@ import { IoIosArrowBack } from "react-icons/io";
 import { TiPin } from "react-icons/ti";
 import ReportIssueInput from '../../components/ReportIssueInput';
 import Button from '../../components/BigButton';
+import { useNavigate } from 'react-router-dom';
 
 export default function ReportIssueScreen() {
+  const navigate = useNavigate();
+
+  const handleBackButtonClick = () => {
+    navigate(-1);
+  };
+
   const handleButtonClick = () => {
     // Define your button click logic here
     alert('Button clicked!');
@@ -19,11 +26,13 @@ export default function ReportIssueScreen() {
     <div className="month-event-screen">
       <h1>Report issue</h1>
       <h3>Tell us what's wrong?</h3>
-      <BackButton className="back-button" icon={<IoIosArrowBack />} onClick={handleButtonClick}/>
+      <BackButton className="back-button" icon={<IoIosArrowBack />} onClick={handleBackButtonClick}/>
       <PinButton className="pin-button" icon={<TiPin  />} onClick={handleButtonClick}/>
       <Sidebar/>
       <ReportIssueInput/>
-      <Button text="REPORT ISSUE" onClick={handleButtonClick}/>
+      <div className='report-issue-button-div'>
+        <Button text="REPORT ISSUE" onClick={handleButtonClick}/>
+      </div>
 
     </div>
   );

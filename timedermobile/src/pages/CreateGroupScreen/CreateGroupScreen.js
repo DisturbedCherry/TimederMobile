@@ -9,21 +9,27 @@ import InputVital from '../../components/CustomInput'
 import InputNormal from '../../components/NormalInput'
 import Button from '../../components/BigButton';
 import ToggleButton from '../../components/ToggleButton'
+import { useNavigate } from 'react-router-dom';
 
 export default function CreateGroupScreen() {
   const handleButtonClick = () => {
     alert('Button clicked!');
   };
 
+  const navigate = useNavigate();
+
+  const handleBackButtonClick = () => {
+    navigate(-1);
+  };
   return (
     <div className="create-group-screen">
-      <BackButton className="back-button" icon={<IoIosArrowBack />} onClick={handleButtonClick}/>
+      <BackButton className="back-button" icon={<IoIosArrowBack />} onClick={handleBackButtonClick}/>
       <PinButton className="pin-button" icon={<TiPin  />} onClick={handleButtonClick}/>
       <Sidebar/>
-      <div className='button-container-notification'>
+      <div className='button-container-notification-groups'>
         <h1>Create group</h1>
         <InputVital placeholdertext='SET NAME'/>
-        <InputNormal placeholdertext='SET JOIN DESCRIPTION'/>
+        <InputNormal placeholdertext='SET JOIN CODE'/>
         <InputNormal placeholdertext='SET MEMBER LIMIT'/>
         <InputNormal placeholdertext='SET DESCRIPTION'/>
         <ToggleButton />

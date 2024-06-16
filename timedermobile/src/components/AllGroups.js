@@ -13,16 +13,16 @@ export default function GEOP() {
   const navigate = useNavigate();
 
   const handleJuwenaliaButtonClick = () => {
-    navigate('/EventScreen')
+    navigate('/GroupScreen')
   }
 
   return (
-    <div className='geop-div'>
-      <SmallButton text='Turniej AZS' onClick={handleButtonClick}/>
-      <SmallButton text='Juwenalia' onClick={handleJuwenaliaButtonClick}/>
-      <SmallButton text='Maraton' onClick={handleButtonClick}/>
-      <SmallButton text='Piątkowe wyjście' onClick={handleButtonClick}/>
-      <SmallButton text='APR' onClick={handleButtonClick}/>
+    <div className="menu-panel-geop">
+      <SmallButton text='Weeikusie' onClick={handleJuwenaliaButtonClick}/>
+      <SmallButton text='Nuggetsy' onClick={handleButtonClick}/>
+      <SmallButton text='Białe kapelusze' onClick={handleButtonClick}/>
+      <SmallButton text='Szybkie chłopaki' onClick={handleButtonClick}/>
+      <SmallButton text='Łabędzie' onClick={handleButtonClick}/>
     </div>
   );
 }

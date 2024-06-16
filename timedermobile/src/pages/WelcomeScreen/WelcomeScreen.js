@@ -4,11 +4,13 @@ import './WelcomeScreen.css';
 import Button from '../../components/BigButton';
 import Logo from '../../components/Logo'; 
 import LimitedTimeOnly from '../../components/LimitedTimeOnly';
+import { useNavigate } from 'react-router-dom';
 
 export default function WelcomeScreen() {
+  const navigate = useNavigate();
+  
   const handleButtonClick = () => {
-    // Define your button click logic here
-    alert('Button clicked!');
+    navigate('/LoginScreen');
   };
 
   return (

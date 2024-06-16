@@ -12,7 +12,7 @@
   width: 100vh;
 }
 
-.switches {
+.switches-settings {
   width: 80%;
   height: 25%;
   margin-top: 5%;
@@ -90,8 +90,16 @@ input:checked + .slider:before {
   border-radius: 50%;
 } 
 
-.button-container {
+.button-container-settings {
   width: 97%;
+  height: 20%;
   position: absolute;
   bottom: 5%;
+}
+
+.button-div-settings {
+  width: 100%;
+  margin: 0;
+  height: 50%;
+  padding: 0;
 }

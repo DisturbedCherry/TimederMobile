@@ -9,17 +9,20 @@ import { BiBell } from "react-icons/bi";
 import { BiBug } from "react-icons/bi";
 import { FiSettings } from "react-icons/fi";
 import { GrGroup } from "react-icons/gr";
+import { useNavigate } from 'react-router-dom';
+import { IoMdMenu } from "react-icons/io";
 
 export default function Sidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const handleButtonClick = () => {
-    // Define your button click logic here
-    alert('Button clicked!');
+  const handleButtonClick = (path) => {
+    navigate(path);
+    toggleSidebar(); 
   };
 
   return (
@@ -33,13 +36,14 @@ export default function Sidebar() {
         <div className="sidebar-content">
           <img src={logo} alt="Logo" className="sidebar-image"/>
           <p className='timeder-text'>TIMEDER</p>
-          <Button text='MY PROFILE' bgcolor='rgb(242, 226, 244)' icon={<BiSolidUser />} textcolor='#312c33' onClick={handleButtonClick}/>
-          <Button text='GROUPS' bgcolor='rgb(242, 226, 244)' icon={<GrGroup />} onClick={handleButtonClick}/>
-          <Button text='EVENT CALENDAR' bgcolor='rgb(242, 226, 244)' icon={<BiSolidCalendar />} onClick={handleButtonClick}/>
-          <Button text='NOTIFICATIONS' bgcolor='rgb(242, 226, 244)' icon={<BiBell />} onClick={handleButtonClick}/>
-          <Button text='REPORT A BUG' bgcolor='rgb(242, 226, 244)' icon={<BiBug />} onClick={handleButtonClick}/>
-          <Button text='SETTINGS' bgcolor='rgb(242, 226, 244)' icon={<FiSettings />} onClick={handleButtonClick}/>
-          <Button text='SIGN OUT' bgcolor='#312c33' textcolor='rgb(242, 226, 244)' onClick={handleButtonClick}/>
+          <Button text='MAIN MENU' bgcolor='rgb(242, 226, 244)' icon={<IoMdMenu  />} textcolor='#312c33' onClick={() => handleButtonClick('/MainMenu')} />
+          <Button text='MY PROFILE' bgcolor='rgb(242, 226, 244)' icon={<BiSolidUser />} textcolor='#312c33' onClick={() => handleButtonClick('/ProfileScreen')} />
+          <Button text='GROUPS' bgcolor='rgb(242, 226, 244)' icon={<GrGroup />} textcolor='#312c33' onClick={() => handleButtonClick('/AllGroups')}/>
+          <Button text='EVENT CALENDAR' bgcolor='rgb(242, 226, 244)' icon={<BiSolidCalendar />} textcolor='#312c33' onClick={() => handleButtonClick('/CalendarScreen')}/>
+          <Button text='NOTIFICATIONS' bgcolor='rgb(242, 226, 244)' icon={<BiBell />} textcolor='#312c33' onClick={() => handleButtonClick('/NotificationScreen')}/>
+          <Button text='REPORT A BUG' bgcolor='rgb(242, 226, 244)' icon={<BiBug />} textcolor='#312c33' onClick={() => handleButtonClick('/ReportIssueScreen')}/>
+          <Button text='SETTINGS' bgcolor='rgb(242, 226, 244)' icon={<FiSettings />} textcolor='#312c33' onClick={() => handleButtonClick('/SettingsScreen')}/>
+          <Button text='SIGN OUT' bgcolor='#312c33' textcolor='rgb(242, 226, 244)' onClick={() => handleButtonClick('/')}/>
 
         </div>
       </div>

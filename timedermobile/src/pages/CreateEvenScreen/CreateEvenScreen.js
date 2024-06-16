@@ -8,18 +8,24 @@ import { TiPin } from "react-icons/ti";
 import InputVital from '../../components/CustomInput'
 import InputNormal from '../../components/NormalInput'
 import Button from '../../components/BigButton';
+import { useNavigate } from 'react-router-dom';
 
 export default function NotificationScreen() {
   const handleButtonClick = () => {
     alert('Button clicked!');
   };
 
+  const navigate = useNavigate();
+
+  const handleBackButtonClick = () => {
+    navigate(-1);
+  };
   return (
     <div className="create-event-screen">
-      <BackButton className="back-button" icon={<IoIosArrowBack />} onClick={handleButtonClick}/>
+      <BackButton className="back-button" icon={<IoIosArrowBack />} onClick={handleBackButtonClick}/>
       <PinButton className="pin-button" icon={<TiPin  />} onClick={handleButtonClick}/>
       <Sidebar/>
-      <div className='button-container-notification'>
+      <div className='button-container-event'>
         <h1>Create event</h1>
         <InputVital placeholdertext='SET NAME'/>
         <InputVital placeholdertext='SET LOCATION'/>
@@ -29,7 +35,9 @@ export default function NotificationScreen() {
         <InputNormal placeholdertext='SET PHOTO'/>
         <InputNormal placeholdertext='ADD USERS'/>
         <InputNormal placeholdertext='ADD GROUPS'/>
-        <Button text="CREATE EVENT" onClick={handleButtonClick}/>
+        <div className='button-positioning-event'>
+          <Button text="CREATE EVENT" onClick={handleButtonClick}/>
+        </div>
       </div>
     </div>
   );

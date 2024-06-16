@@ -14,6 +14,7 @@ import ProfileScreen from './pages/ProfileScreen/ProfileScreen';
 import ReportIssueScreen from './pages/ReportIssueScreen/ReportIssueScreen';
 import SettingsScreen from './pages/SettingsScreen/SettingsScreen';
 import WelcomeScreen from './pages/WelcomeScreen/WelcomeScreen';
+import AllGroups from './pages/AllGroupsScreen/AllGroupsScreen'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <BrowserRouter>
           <Routes>  
             <Route index element={<WelcomeScreen/>}/>
+            <Route path = "/AllGroups" element = {<AllGroups/>}/>
             <Route path = "/CalendarScreen" element = {<CalendarScreen/>}/>
             <Route path = "/CreateEvenScreen" element = {<CreateEvenScreen/>}/>
             <Route path = "/CreateGroupScreen" element = {<CreateGroupScreen/>}/>
