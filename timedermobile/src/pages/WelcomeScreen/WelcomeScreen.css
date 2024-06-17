@@ -1,0 +1,14 @@
+/* WelcomeScreen.css */
+
+/* Ensure .welcome-screen is flex container */
+.welcome-screen {
+  background: rgb(242, 226, 244);
+  background: radial-gradient(circle, rgba(242, 226, 244, 1) 0%, rgba(186, 130, 194, 1) 100%);
+  display: flex;
+  flex-direction: column; /* Align items in a column */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  position: relative;
+  height: 100%; /* Adjust height as needed */
+  width: 100vh;
+}

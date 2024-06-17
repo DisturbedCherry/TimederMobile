@@ -1,0 +1,30 @@
+/* SettingsScreen.css */
+
+.event-calendar-screen {
+  background: rgb(242, 226, 244);
+  background: radial-gradient(circle, rgba(242, 226, 244, 1) 0%, rgba(186, 130, 194, 1) 100%);
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+  position: relative;
+  height: 100%; 
+  width: 100vh;
+}
+
+.content-part {
+  position: absolute;
+  top: 20%;
+  text-align: center;
+}
+
+.calendar-picture-temp {
+  width: 90%;
+  border-radius: 5%;
+}
+
+.button-container-for-calendar {
+  position: absolute;
+  top: 80%;
+  width: 95%;
+}
