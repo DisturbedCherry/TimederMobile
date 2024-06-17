@@ -25,6 +25,10 @@ export default function AllGroupsScreen() {
     alert('Button clicked!');
   };
 
+  const redirectToCreateGroup = () => {
+    navigate('/CreateGroupScreen');
+  };
+
   return (
     <div className="all-groups-screen">
       <BackButton className="back-button" icon={<IoIosArrowBack />} onClick={handleBackButtonClick}/>
@@ -33,7 +37,7 @@ export default function AllGroupsScreen() {
       <div className='content-part-groups'>
         <div className='button-container-allgroups'>
           <SmallButton text='JOIN' onClick={handleButtonClick}/>
-          <SmallButton text='CREATE' onClick={handleButtonClick}/>
+          <SmallButton text='CREATE' onClick={redirectToCreateGroup}/>
         </div>
         <div className='names'>
           <Content/>

@@ -1,22 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Components.css';
 
-const InputBox = ({ placeholdertext }) => {
-  const [inputValue, setInputValue] = useState('');
-
-  const handleChange = (event) => {
-    setInputValue(event.target.value);
-  };
-
+const InputNormal = ({ placeholdertext, onChange }) => {
   return (
-    <input
-      type="text"
-      value={inputValue}
-      onChange={handleChange}
-      className="input-box-normal"
-      placeholder={placeholdertext}
-    />
+      <input
+          type="text"
+          onChange={onChange}
+          className="input-box-normal"
+          placeholder={placeholdertext}
+      />
   );
 };
 
-export default InputBox;
+export default InputNormal;
