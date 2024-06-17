@@ -25,6 +25,10 @@ export default function CalendarScreen() {
     alert('Button clicked!');
   };
 
+  const redirectToCreateEvent = () => {
+    navigate('/CreateEventScreen');
+  };
+
   return (
     <div className="event-calendar-screen">
       <BackButton className="back-button" icon={<IoIosArrowBack />} onClick={handleBackButtonClick}/>
@@ -36,7 +40,7 @@ export default function CalendarScreen() {
       </div>
       <div className='button-container-for-calendar'>
         <SmallButton text='VIEW THIS MONTH EVENTS' onClick={handleThisMonthButtonClick}/>
-        <SmallButton text='CREATE NEW EVENT' onClick={handleButtonClick}/>
+        <SmallButton text='CREATE NEW EVENT' onClick={redirectToCreateEvent}/>
       </div>
     </div>
   );
