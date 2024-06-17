@@ -12,6 +12,10 @@ In the project directory, you can run:
 
 ### `npm i`
 
+Additionally you need to run:
+
+### `npm install react-icons --save`
+
 and then
 
 ### `npm start`
