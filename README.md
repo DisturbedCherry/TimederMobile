@@ -4,7 +4,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+To clone repository you can run in command line:
+
+### `git clone https://github.com/DisturbedCherry/TimederMobile.git`
+
 In the project directory, you can run:
+
+### `npm i`
+
+and then
 
 ### `npm start`
 
