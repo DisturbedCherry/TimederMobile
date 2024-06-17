@@ -15,7 +15,6 @@ export default function LoginScreen() {
   const [index, setIndex] = useState('');
   const [password, setPassword] = useState('');
 
-
   const handleBackButtonClick = () => {
     navigate(-1);
   };
@@ -28,8 +27,9 @@ export default function LoginScreen() {
       try {
           const response = await AuthService.login(index, password);
           if (response.status === 200) {
-              showSuccessMessage('Login successful').then(r => r.dismiss);
+              localStorage.removeItem('token');
               localStorage.setItem('token', response.data.token);
+              showSuccessMessage('Login successful').then(r => r.dismiss);
               navigate('/MainMenu');
           } else {
               showErrorMessage('Login failed').then(r => r.dismiss);

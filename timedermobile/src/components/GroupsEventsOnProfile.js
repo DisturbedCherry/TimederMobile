@@ -24,7 +24,7 @@ const [userEvents, setUserEvents] = useState([]);
                 const response = await getUserGroups(); // Use the getUser function
                 setUserGroups(response.data);
             } catch (error) {
-                showErrorMessage('Failed to fetch user groups.').then(r => r.dismiss);
+                showErrorMessage('Failed to fetch user groups. Error: ' + error).then(r => r.dismiss);
             }
         };
 
@@ -33,7 +33,7 @@ const [userEvents, setUserEvents] = useState([]);
                 const response = await getUserEvents(); // Use the getUser function
                 setUserEvents(response.data);
             } catch (error) {
-                showErrorMessage('Failed to fetch user events.').then(r => r.dismiss);
+                showErrorMessage('Failed to fetch user events. Error: ' + error).then(r => r.dismiss);
             }
         }
 
