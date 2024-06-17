@@ -23,8 +23,7 @@ export default function MonthEventScreen() {
 
   return (
     <div className="month-event-screen">
-      <h1>April events</h1>
-      <h5>Events this month:</h5>
+      <h1>Latest event:</h1>
       <BackButton className="back-button" icon={<IoIosArrowBack />} onClick={handleBackButtonClick}/>
       <PinButton className="pin-button" icon={<TiPin  />} onClick={handleButtonClick}/>
       <Sidebar/>
