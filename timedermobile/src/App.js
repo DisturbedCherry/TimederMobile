@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CalendarScreen from './pages/CalendarScreen/CalendarScreen';
-import CreateEvenScreen from './pages/CreateEvenScreen/CreateEvenScreen';
+import CreateEvenScreen from './pages/CreateEvenScreen/CreateEventScreen';
 import CreateGroupScreen from './pages/CreateGroupScreen/CreateGroupScreen';
 import EventScreen from './pages/EventScreen/EventScreen';
 import GroupScreen from './pages/GroupScreen/GroupScreen';
@@ -25,7 +25,7 @@ function App() {
             <Route index element={<WelcomeScreen/>}/>
             <Route path = "/AllGroups" element = {<AllGroups/>}/>
             <Route path = "/CalendarScreen" element = {<CalendarScreen/>}/>
-            <Route path = "/CreateEvenScreen" element = {<CreateEvenScreen/>}/>
+            <Route path = "/CreateEventScreen" element = {<CreateEvenScreen/>}/>
             <Route path = "/CreateGroupScreen" element = {<CreateGroupScreen/>}/>
             <Route path = "/EventScreen" element = {<EventScreen/>}/>
             <Route path = "/GroupScreen" element = {<GroupScreen/>}/>
