@@ -1,8 +1,6 @@
 import BackButton from '../../components/CornerButton';
-import ForgotPasswordButton from '../../components/ForgotPasswordButton';
-import LimitedTimeOnly from '../../components/LimitedTimeOnly';
 import Input from '../../components/Input';
-import './LoginScreen.css';
+import './RecoverPassword.css';
 import Button from '../../components/BigButton';
 import { IoIosArrowBack } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
@@ -10,7 +8,7 @@ import {useState} from "react";
 import AuthService from "../../services/authService";
 import {showErrorMessage, showSuccessMessage} from "../../services/swalService";
 
-export default function LoginScreen() {
+export default function RecoverPassword() {
   const navigate = useNavigate();
   const [index, setIndex] = useState('');
   const [password, setPassword] = useState('');
@@ -20,8 +18,8 @@ export default function LoginScreen() {
     navigate(-1);
   };
 
-  const handleForgotPasswordClick = () => {
-    navigate('/RecoverPassword');
+  const handleButtonClick = () => {
+    alert('NOT WORKING YET');
   }
 
   const handleLoginButtonClick = async () => {
@@ -40,13 +38,18 @@ export default function LoginScreen() {
   };
 
   return (
-    <div className="login-screen">
+    <div className="recover-password-screen">
       <BackButton className="back-button" icon={<IoIosArrowBack />} onClick={handleBackButtonClick}/>
-      <LimitedTimeOnly/>
-      <Input label='INDEX' placeholder='123456' value={index} onChange={e => setIndex(e.target.value)}/>
-      <Input label='PASSWORD' placeholder='**********' value={password} onChange={e => setPassword(e.target.value)} type="password"/>
-      <ForgotPasswordButton className="forgot-password-button" text="FORGOT PASSWORD" onClick={handleForgotPasswordClick} />
-      <Button text="LOG IN" onClick={handleLoginButtonClick}/>
+      <div className='reset-password-content-div'>
+        <div className='reset-password-text-div'>
+          Reset password
+        </div>
+        <Input label='Email' placeholder='123456@edu.p.lodz.pl'/>
+        <div>
+          <Button text='Send email' onClick={handleButtonClick}/>
+        </div>
+      </div>
+
     </div>
   )
 }

@@ -14,7 +14,8 @@ import ProfileScreen from './pages/ProfileScreen/ProfileScreen';
 import ReportIssueScreen from './pages/ReportIssueScreen/ReportIssueScreen';
 import SettingsScreen from './pages/SettingsScreen/SettingsScreen';
 import WelcomeScreen from './pages/WelcomeScreen/WelcomeScreen';
-import AllGroups from './pages/AllGroupsScreen/AllGroupsScreen'
+import AllGroups from './pages/AllGroupsScreen/AllGroupsScreen';
+import RecoverPassword from './pages/RecoverPassword/RecoverPassword'
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path = "/MonthEventScreen" element = {<MonthEventScreen/>}/>
             <Route path = "*" element = {<NoPage/>}/>
             <Route path = "/NotificationScreen" element = {<NotificationScreen/>}/>
+            <Route path = "/RecoverPassword" element = {<RecoverPassword/>}/>
             <Route path = "/ProfileScreen" element = {<ProfileScreen/>}/>
             <Route path = "/ReportIssueScreen" element = {<ReportIssueScreen/>}/>
             <Route path = "/SettingsScreen" element = {<SettingsScreen/>}/>
