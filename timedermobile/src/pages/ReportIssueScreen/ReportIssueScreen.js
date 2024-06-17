@@ -26,6 +26,7 @@ export default function ReportIssueScreen() {
             const response = await reportError(authService.getUserId(), issue);
             if (response.status === 201) {
                 await showSuccessMessage('Issue reported successfully! Thank you!');
+                setIssue('');
             } else {
                 await showErrorMessage('Failed to report issue.');
             }
