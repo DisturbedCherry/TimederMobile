@@ -13,6 +13,7 @@ import { PiBeerBottle } from "react-icons/pi";
 import { FiSettings } from "react-icons/fi";
 import { FaRegDotCircle } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import { MdEmojiEvents } from "react-icons/md";
 
 export default function MainMenu() {
   const navigate = useNavigate();
@@ -38,7 +39,7 @@ export default function MainMenu() {
           <Panel icon={<FiSettings />} navigation={'/SettingsScreen'}/>
         </div>
         <div className='panel-row'>
-          <Panel icon={<FaRegDotCircle  />} navigation={'/MainMenu'}/>
+          <Panel icon={<MdEmojiEvents   />} navigation={'/MonthEventScreen'}/>
           <Panel icon={<FaRegDotCircle  />} navigation={'/MainMenu'}/>
           <Panel icon={<FaRegDotCircle  />} navigation={'/MainMenu'}/>
         </div>

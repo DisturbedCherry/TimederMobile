@@ -19,15 +19,6 @@ export default function GEOP() {
 const [userEvents, setUserEvents] = useState([]);
 
     useEffect(() => {
-        const fetchUserGroups = async () => {
-            try {
-                const response = await getUserGroups(); // Use the getUser function
-                setUserGroups(response.data);
-            } catch (error) {
-                showErrorMessage('Failed to fetch user groups. Error: ' + error).then(r => r.dismiss);
-            }
-        };
-
         const fetchUserEvents = async () =>  {
             try {
                 const response = await getUserEvents(); // Use the getUser function
@@ -38,7 +29,6 @@ const [userEvents, setUserEvents] = useState([]);
         }
 
         fetchUserEvents();
-        fetchUserGroups();
     }, []);
 
   const handleJuwenaliaButtonClick = () => {
@@ -47,12 +37,9 @@ const [userEvents, setUserEvents] = useState([]);
 
   return (
     <div className='geop-div'>
-        <SmallButton text='Juwenalia' onClick={handleJuwenaliaButtonClick}/>
-        {userGroups.map((group, index) => (
-            <SmallButton key={index} text={group.name} onClick={handleButtonClick}/>
-        ))}
+        {/*<SmallButton text='Juwenalia' onClick={handleJuwenaliaButtonClick}/>*/}
         {userEvents.map((event, index) => (
-            <SmallButton key={index} text={event.name} onClick={handleButtonClick}/>
+            index === 0 ? <SmallButton key={index} text={event.name} onClick={handleButtonClick}/> : null
         ))}
     </div>
   );

@@ -39,7 +39,7 @@ export default function CalendarScreen() {
         <img src={Calendar} alt="calendar" className='calendar-picture-temp'/>
       </div>
       <div className='button-container-for-calendar'>
-        <SmallButton text='VIEW THIS MONTH EVENTS' onClick={handleThisMonthButtonClick}/>
+        <SmallButton text='VIEW LATEST EVENT' onClick={handleThisMonthButtonClick}/>
         <SmallButton text='CREATE NEW EVENT' onClick={redirectToCreateEvent}/>
       </div>
     </div>

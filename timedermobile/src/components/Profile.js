@@ -1,7 +1,7 @@
 // Profile.js
 import React from 'react';
 import './Components.css'; // You can create and style this CSS file if needed
-import GroupsEventsOnProfile from './GroupsEventsOnProfile'
+import GroupsEventsOnProfile2 from './GroupsEventsOnProfile2'
 
 export default function ProfileContent({ name, profile }) {
   const photoStyle = {
@@ -23,7 +23,7 @@ export default function ProfileContent({ name, profile }) {
       <p style={paraStyle}>Hello {name}</p>
       <img src={profile} alt="profile" style={photoStyle}/>
       <div className='groups-and-events'>My groups and events:</div>
-      <GroupsEventsOnProfile/>
+      <GroupsEventsOnProfile2/>
     </div>
   );
 }
